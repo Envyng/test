@@ -1,0 +1,73 @@
+//fonts
+$roboto: 'Roboto', sans-serif;
+$myriad: "MyriadProRegular", sans-serif;
+
+//font colors
+$black-color: #000000;
+$white-color: #ffffff;
+$hover-color: #d8ec54;
+$gray-color: #898888;
+
+html {
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+    outline: none;
+    border: none;
+}
+body {
+    font-family: "MyriadProRegular";
+    color: $black-color;
+}
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.container{
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+@mixin link_color($link_color) {
+    &:hover {color: $link_color}
+    &:active {color: $link_color}
+    &:visited {color: $link_color}
+    &:focus {color: $link_color}
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin placeholder($placeholder-color){
+    &::-webkit-input-placeholder {color:$placeholder-color;}
+    &::-moz-placeholder          {color:$placeholder-color;}/* Firefox 19+ */
+    &:-moz-placeholder           {color:$placeholder-color;}/* Firefox 18- */
+    &:-ms-input-placeholder      {color:$placeholder-color;}
+    &::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+    &::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+    &:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+    &:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+    &:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+    &:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+    &:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+    &:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+}
